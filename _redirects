@@ -1,23 +1,5 @@
 [[redirects]]
-  from = "/home"
-  to = "/home"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/home"
+  from = "/*"
   to = "/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/certifications"
-  to = "/certifications"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/skills-and-aspirations"
-  to = "/skills-and-aspirations"
   status = 301
   force = true
