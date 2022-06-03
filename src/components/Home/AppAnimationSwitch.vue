@@ -1,15 +1,15 @@
 <template>
   <div class="animation-switch" :class="animtoggle">
     <span id="animation-state">
-      <span v-if="isAnimationDisabled">Animations are Enabled:</span>
-      <span v-else>Animations are Disabled:</span>
+      <span v-if="isAnimationDisabled">Animations are Disabled:</span>
+      <span v-else>Animations are Enabled:</span>
     </span>
     <label class="switch">
       <input
         aria-labelledby="animation-state"
         @click="animToggleStore"
         type="checkbox"
-        :checked="isAnimationDisabled"
+        :checked="!isAnimationDisabled"
       />
       <span class="slider round"></span>
     </label>
@@ -43,9 +43,7 @@ span {
 }
 
 .animation-switch {
-  @media only screen and (max-width: 820px) {
-    margin-top: 30px;
-  }
+  margin-top: 30px;
 }
 
 .switch {
