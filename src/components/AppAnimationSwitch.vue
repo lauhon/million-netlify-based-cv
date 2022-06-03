@@ -41,7 +41,7 @@ export default {
 .toggleloggedin {
   padding: 10px;
   border-radius: 0 6px 6px 0;
-  background: #00dc9e;
+  background: #ccc;
 
   @media (min-width: 62.5em) and (min-height: 37.5em) {
     position: fixed;
@@ -52,7 +52,7 @@ export default {
 
 .toggleloggedout {
   border-radius: 0 0 10px 0;
-  background: #00dc9e;
+  background: #ccc;
 
   @media (min-width: 62.5em) and (min-height: 37.5em) {
     position: fixed;
@@ -87,7 +87,7 @@ span {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #238b5f;
+  background-color: #555;
   transition: 0.4s all ease;
 }
 
