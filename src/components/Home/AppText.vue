@@ -1,29 +1,27 @@
 <template>
-  <a :href="`${urlSlug}`" :target="`${target}`">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="450"
-      height="250"
-      :x="svgCoords.x"
-      :y="svgCoords.y"
-      viewBox="0 0 280 115.4"
-    >
-      <g :class="`textnode text${num}`">
-        <rect class="a" :width="`${width}`" height="21.39" />
-        <rect class="b" y="25.4" width="280" height="56" />
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="450"
+    height="250"
+    :x="svgCoords.x"
+    :y="svgCoords.y"
+    viewBox="0 0 280 115.4"
+  >
+    <g :class="`textnode text${num}`">
+      <rect class="a" :width="`${width}`" height="21.39" />
+      <rect class="b" y="25.4" width="280" height="56" />
 
-        <text class="d" transform="translate(7.6 14)">
-          <slot name="date">Jul 13, 2016</slot>
-        </text>
-        <text class="e" transform="translate(16.5 48.7)">
-          <slot name="event">Something here</slot>
-        </text>
-        <text class="e" transform="translate(16.5 70)">
-          <slot name="event2" />
-        </text>
-      </g>
-    </svg>
-  </a>
+      <text class="d" transform="translate(7.6 14)">
+        <slot name="date">Jul 13, 2016</slot>
+      </text>
+      <text class="e" transform="translate(16.5 48.7)">
+        <slot name="event">Something here</slot>
+      </text>
+      <text class="e" transform="translate(16.5 70)">
+        <slot name="event2" />
+      </text>
+    </g>
+  </svg>
 </template>
 
 <script>
@@ -45,13 +43,6 @@ export default {
   },
   mixins: [coords],
   props: {
-    urlSlug: {
-      type: String,
-    },
-    target: {
-      type: String,
-      default: "_blank",
-    },
     width: {
       type: [Number, String],
       default: 60,

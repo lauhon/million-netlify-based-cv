@@ -1,5 +1,10 @@
 <script>
+import AppLink from "@/components/AppLink.vue";
+
 export default {
+  components: {
+    AppLink,
+  },
   data() {
     return {
       navOpen: false,
@@ -17,10 +22,12 @@ export default {
   <nav class="nav" :class="{ open: navOpen }">
     <ul class="list">
       <li>
-        <a href="/home"> Home</a>
+        <app-link href="/home"> Home</app-link>
       </li>
-      <li><a href="/certifications">Certifications</a></li>
-      <li><a href="/skills-and-aspirations">Skills/Aspirations</a></li>
+      <li><app-link href="/certifications">Certifications</app-link></li>
+      <li>
+        <app-link href="/skills-and-aspirations">Skills/Aspirations</app-link>
+      </li>
     </ul>
     <button class="handle" @click="toggleNav">
       <span v-if="!navOpen">v</span>
