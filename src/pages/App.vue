@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <app-login-result-sticky v-if="user.number" />
+    <app-navigation></app-navigation>
     <app-animation-switch />
     <app-github-corner />
 
@@ -8,36 +8,41 @@
       <app-header />
     </section>
     <div class="path-main-size">
-    <svg  id="timeline" xmlns="http://www.w3.org/2000/svg" :viewBox="timelineAttributes.viewBox">
-     
-      <app-mobilepath />
+      <svg
+        id="timeline"
+        xmlns="http://www.w3.org/2000/svg"
+        :viewBox="timelineAttributes.viewBox"
+      >
+        <app-mobilepath />
 
-      <app2016 />
-
-    </svg>
+        <app2016 />
+      </svg>
     </div>
 
     <div class="disclaimer">
-      <p>The Graphics and animations were mainly done by Netlify, their original sourcecode can be found in <a href="https://github.com/netlify/million-devs" target="_blank">their Repository</a></p>
-  </div>
+      <p>
+        The Graphics and animations were mainly done by Netlify, their original
+        sourcecode can be found in
+        <a href="https://github.com/netlify/million-devs" target="_blank"
+          >their Repository</a
+        >
+      </p>
+    </div>
+    <app-footer />
   </div>
 </template>
-
 <script>
-import App2016 from "@/components/App2016.vue";
-import AppAnimationSwitch from "@/components/AppAnimationSwitch.vue";
+import AppFooter from "@/components/AppFooter.vue";
+import AppNavigation from "@/components/AppNavigation.vue";
 import AppGithubCorner from "@/components/AppGithubCorner.vue";
-import AppHeader from "@/components/AppHeader.vue";
-import AppMobilepath from "@/components/AppMobilepath.vue";
-import AppText from "@/components/AppText.vue";
-//gsap
+import App2016 from "@/components/Home/App2016.vue";
+import AppAnimationSwitch from "@/components/Home/AppAnimationSwitch.vue";
+import AppHeader from "@/components/Home/AppHeader.vue";
+import AppMobilepath from "@/components/Home/AppMobilepath.vue";
+import AppText from "@/components/Home/AppText.vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
 import { mapState } from "vuex";
-
-
-
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,10 +50,12 @@ export default {
   components: {
     AppGithubCorner,
     AppMobilepath,
+    AppNavigation,
     AppHeader,
+    AppFooter,
     AppText,
     App2016,
-    AppAnimationSwitch
+    AppAnimationSwitch,
   },
   computed: {
     ...mapState(["viewportSize", "user", "isAnimationDisabled"]),
@@ -113,18 +120,18 @@ body {
 }
 
 .path-main-size {
-@media only screen and(max-width: 1000px) {
-  height: 5250px;
-}
+  @media only screen and(max-width: 1000px) {
+    height: 5250px;
+  }
 
   overflow: hidden;
-  height: 120vw;
+  height: 130vw;
 }
 
 @media only screen and (max-width: 1000px) {
   #timeline {
-    max-width: 600px;
-    min-width: 500px;
+    max-width: 550px;
+    min-width: 430px;
     display: block;
     margin-top: 600px;
     margin-left: auto;
@@ -152,9 +159,7 @@ body {
   text-align: center;
 
   & > p {
-  flex: 1
-
+    flex: 1;
   }
-  
 }
 </style>

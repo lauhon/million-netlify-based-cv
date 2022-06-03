@@ -1,8 +1,5 @@
 <template>
-  <a
-    :href="`${urlSlug}`"
-    target="_blank"
-  >
+  <a :href="`${urlSlug}`" :target="`${target}`">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="450"
@@ -14,7 +11,7 @@
       <g :class="`textnode text${num}`">
         <rect class="a" :width="`${width}`" height="21.39" />
         <rect class="b" y="25.4" width="280" height="56" />
-       
+
         <text class="d" transform="translate(7.6 14)">
           <slot name="date">Jul 13, 2016</slot>
         </text>
@@ -50,6 +47,10 @@ export default {
   props: {
     urlSlug: {
       type: String,
+    },
+    target: {
+      type: String,
+      default: "_blank",
     },
     width: {
       type: [Number, String],

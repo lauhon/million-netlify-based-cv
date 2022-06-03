@@ -1,5 +1,10 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" class="mobile-path" viewBox="0 0 120.4 2950" preserveAspectRatio="none">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="mobile-path"
+    viewBox="0 0 120.4 2950"
+    preserveAspectRatio="none"
+  >
     <div class="dummy">asdf</div>
 
     <path
@@ -23,8 +28,7 @@ export default {};
   stroke-width: 10px;
 }
 
-.mobile-path{
-  min-width: 500px;
+.mobile-path {
+  min-width: 450;
 }
-
 </style>
