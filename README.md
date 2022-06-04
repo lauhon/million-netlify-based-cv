@@ -1,10 +1,8 @@
 # Laurenz Honauer
 
-This Repo is for [my personal website](https://laurenzhonauer.com). It does not generate revenue nor does it collect users data.
+This Repo is for fidgeting arround with creating a somewhat pretty CV. Will Not get online because the original creators would not be happy with that.
 
-I use it to share my "CV" and give out basic information about me.
-
-It is heavily inspired by https://million-devs.netlify.com/, the code of it is open source https://github.com/netlify/million-devs.
+It is heavily inspired by and uses code from https://million-devs.netlify.com/, the code of it is open source https://github.com/netlify/million-devs.
 
 ## Project setup
 
