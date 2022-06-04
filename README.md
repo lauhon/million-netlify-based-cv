@@ -1,4 +1,4 @@
-# Laurenz Honauer
+# Description
 
 This Repo is for fidgeting arround with creating a somewhat pretty CV. Will Not get online because the original creators would not be happy with that.
 
